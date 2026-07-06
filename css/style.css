@@ -47,22 +47,6 @@ input, select, textarea { font-family: var(--font); }
 
 /* ─── HEADER / NAV ─── */
 .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
-.topbar {
-  background: var(--sky-deep);
-  padding: 0.5rem 0;
-  font-size: 0.75rem; color: rgba(255,255,255,0.75);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.topbar.hidden { transform: translateY(-100%); opacity: 0; }
-.topbar-inner { display: flex; justify-content: space-between; align-items: center; }
-.topbar-left, .topbar-right { display: flex; gap: 1.5rem; align-items: center; }
-.topbar-left a, .topbar-right span {
-  color: rgba(255,255,255,0.8); font-size: 0.72rem; font-weight: 500;
-  letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.45rem;
-  transition: color 0.2s;
-}
-.topbar-left a i, .topbar-right span i { color: var(--sky-light); font-size: 0.72rem; }
-.topbar-left a:hover { color: var(--white); }
 .navbar {
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(20px);
@@ -155,12 +139,29 @@ input, select, textarea { font-family: var(--font); }
   color: white !important; text-align: center; margin-top: 0.5rem;
 }
 
+/* Tablets / small laptops: collapse the full nav earlier so links & buttons
+   never get squeezed against the logo (was only collapsing below 768px). */
+@media (max-width: 1024px) {
+  .nav-links, .nav-actions { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* Phones: tighten up the header so it doesn't eat too much screen */
+@media (max-width: 480px) {
+  .nav-container { padding: 0 1.2rem; gap: 1rem; }
+  .logo-img { height: 40px; }
+  .logo-main { font-size: 1.1rem; }
+}
+
 /* ─── HERO ─── */
 .hero {
   position: relative; min-height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center; overflow: hidden;
-  padding-top: 130px;
+  padding-top: 96px;
+}
+@media (max-width: 480px) {
+  .hero { padding-top: 84px; }
 }
 
 /* Hero slideshow bg */
@@ -215,10 +216,8 @@ input, select, textarea { font-family: var(--font); }
   font-family: 'Inter', Arial, sans-serif; font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.24em; text-transform: uppercase;
   color: rgba(255,255,255,0.85);
-  margin-bottom: 2rem;
-  margin-top:-2rem;
+  margin-bottom: 1.2rem;
   display: flex; align-items: center; gap: 1rem;
-  margin-left:-270px;
 }
 .hero-eyebrow::before { content: ''; flex: 0 0 32px; height: 1px; background: rgba(255,255,255,0.45); }
 .hero-eyebrow::after { content: ''; flex: 1 1 auto; max-width: 50px; height: 1px; background: rgba(255,255,255,0.45); }
@@ -242,9 +241,6 @@ input, select, textarea { font-family: var(--font); }
 
 .hero-headline .line:nth-child(2) {
     display:block;
-    margin-left:-200px;
-
-    
 }
 
 .hero-headline .line:nth-child(3) {
@@ -420,6 +416,7 @@ input, select, textarea { font-family: var(--font); }
 /* ─── CONTAINER / SECTIONS ─── */
 .container { max-width: 1320px; margin: 0 auto; padding: 0 2rem; }
 .section { padding: 6rem 0; }
+#routes, #destinations, #experiences, #about, #contact { scroll-margin-top: 90px; }
 .section-header { text-align: center; margin-bottom: 4rem; }
 .section-eyebrow {
   font-family: 'Inter', Arial, sans-serif; font-size: 0.68rem; font-weight: 600;
@@ -1084,9 +1081,6 @@ input, select, textarea { font-family: var(--font); }
   .phone-mockup { justify-content: flex-start; }
 }
 @media (max-width: 768px) {
-  .nav-links, .nav-actions { display: none; }
-  .hamburger { display: flex; }
-  .topbar-left a:not(:first-child) { display: none; }
   .hero-headline { font-size: 2.4rem; }
   .hero-content { align-items: flex-start; }
   .hero-text-block { max-width: 100%; }
