@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nanda Yacht Luxury – Premium yacht charters in Mumbai & Goa. Experience bespoke luxury voyages across India's most stunning coastlines." />
+  <title>Nanda Yacht Luxury </title>
+
+  <!-- Fonts: Fraunces (serif/display), Inter (sans/body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header id="siteHeader" class="site-header">
+  <!-- Top trust strip -->
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+919766426758"><i class="fas fa-phone-alt"></i> +91 97664 26758</a>
+        <a href="mailto:info@nandayacht.com"><i class="fas fa-envelope"></i> info@nandayacht.com</a>
+        <a href="#destinations"><i class="fas fa-map-marker-alt"></i> Mumbai &amp; Goa</a>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fas fa-star"></i> 4.9/5 Rated Charter Fleet</span>
+        <span><i class="fas fa-shield-alt"></i> Trusted Since 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <!-- LOGO: Replace img src with your logo file path -->
+      <a href="#" class="nav-logo">
+        <img src="image/nanda-logo.png" alt="Nanda Yacht Luxury" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-main">Nanda Luxury Yacht</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#routes">Fleet</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/919766426758" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#contact" class="btn-gold">Book Yacht</a>
+      </div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#routes" onclick="closeMobile()">Fleet</a></li>
+        <li><a href="#destinations" onclick="closeMobile()">Destinations</a></li>
+        <li><a href="#experiences" onclick="closeMobile()">Experiences</a></li>
+        <li><a href="#about" onclick="closeMobile()">About</a></li>
+        <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+        <li><a href="#contact" class="btn-gold-mobile" onclick="closeMobile()">Book Yacht</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" class="hero">
+  <!-- Slideshow Background -->
+  <div class="hero-slideshow">
+    <!-- Slide 1-3: Live video — yacht running at sea -->
+    <div class="hero-slide active" data-label="Live at Sea · Nanda Fleet in Motion" data-video="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="video/v1.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-slide" data-label="Sunset Cruise · Mumbai Coastline" data-video="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="video/v2.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-slide" data-label="Emerald Waters · Goa Charter" data-video="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="video/v4.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-slide" data-label="Emerald Waters · Goa Charter" data-video="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="video/v5.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <!-- Gradient overlay for legibility -->
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-bottom"></div>
+
+  <!-- Live slide label -->
+  <div class="slide-label">
+    <div class="slide-label-inner">
+      <span class="slide-label-dot"></span>
+      <span id="slideLabelText">Live at Sea · Nanda Fleet in Motion</span>
+    </div>
+  </div>
+
+  <!-- Slide dots -->
+  <div class="hero-dots" id="heroDots"></div>
+
+  <!-- Hero Content — RIGHT side -->
+  <div class="hero-content">
+    <div class="hero-text-block">
+      <p class="hero-eyebrow" data-gsap="fadeUp">Mumbai &amp; Goa · Premium Yacht </p>
+      <h1 class="hero-headline" data-gsap="headline">
+        <span class="line">Sail Into</span>
+        <span class="line extraodinary">Extraordinary</span>
+        <span class="line">Luxury</span>
+      </h1>
+      <div class="hero-highlights" data-gsap="fadeUp">
+        <div class="hero-highlight"><i class="fas fa-user-tie"></i><span>Professional Crew &amp; Concierge</span></div>
+        <div class="hero-highlight"><i class="fas fa-utensils"></i><span>Onboard Chef &amp; Bar Service</span></div>
+        <div class="hero-highlight"><i class="fas fa-route"></i><span>Custom Routes, Your Way</span></div>
+        <div class="hero-highlight"><i class="fas fa-shield-alt"></i><span>Fully Insured &amp; Licensed Fleet</span></div>
+      </div>
+      <div class="hero-btns" data-gsap="fadeUp">
+        <a href="#routes" class="btn-primary">
+          <span>Explore Fleet</span><i class="fas fa-ship"></i>
+        </a>
+        <a href="#contact" class="btn-outline">
+          <span>Book Yacht</span><i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ═══ CHARTER ROUTES: MUMBAI / GOA SELECTOR ═══ -->
+<section id="routes" class="section routes-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="section-eyebrow">Plan Your Voyage</p>
+      <h2 class="section-title">Choose Your Charter</h2>
+      <p class="section-desc">Pick a destination to see the fleet and routes available there.</p>
+    </div>
+
+    <!-- Destination toggle -->
+    <div class="dest-toggle" data-aos="fade-up">
+      <button class="dest-toggle-btn active" data-dest="mumbai" id="destBtnMumbai">
+        <i class="fas fa-anchor"></i> Mumbai Yacht
+      </button>
+      <button class="dest-toggle-btn" data-dest="goa" id="destBtnGoa">
+        <i class="fas fa-anchor"></i> Goa
+      </button>
+    </div>
+
+    <!-- MUMBAI PANEL -->
+    <div class="dest-panel active" id="panel-mumbai">
+      <div class="route-filter-bar" data-aos="fade-up">
+        <button class="route-btn active" data-route="all">All Yachts</button>
+        <button class="route-btn" data-route="mum-ele">Mumbai → Elephanta</button>
+        <button class="route-btn" data-route="ele-mum">Elephanta → Mumbai</button>
+        <button class="route-btn" data-route="mum-man">Mumbai → Mandwa</button>
+        <button class="route-btn" data-route="man-mum">Mandwa → Mumbai</button>
+      </div>
+
+      <div class="fleet-grid route-yacht-grid" id="mumbaiYachtGrid">
+        <div class="yacht-card" data-routes="mum-ele ele-mum mum-man man-mum" data-aos="fade-up" data-aos-delay="200">
+          <div class="yacht-img" onclick="openYachtDetail('allegra')">
+            <img src="image/yacht_explore_images/allegra.jpeg" alt="Allegra" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">Allegra</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 60m</span>
+              <span><i class="fas fa-users"></i> 8 Guests</span>
+              <span><i class="fas fa-bed"></i> 9 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Elephanta</span>
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹1,75,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+        <div class="yacht-card" data-routes="mum-ele ele-mum mum-man man-mum" data-aos="fade-up" data-aos-delay="100">
+          <div class="yacht-img" onclick="openYachtDetail('bugme')">
+            <img src="image/yacht_explore_images/bug_me.jpeg" alt="Bug Me yacht" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">Bug Me</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 32m</span>
+              <span><i class="fas fa-users"></i> 8 Guests</span>
+              <span><i class="fas fa-bed"></i> 4 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Elephanta</span>
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹60,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+        <div class="yacht-card" data-routes="mum-man man-mum" data-aos="fade-up" data-aos-delay="50">
+          <div class="yacht-img" onclick="openYachtDetail('letlive')">
+            <img src="image/yacht_explore_images/live_let_live.jpeg" alt="Live &amp; Let Live yacht" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">Live &amp; Let Live</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 38m</span>
+              <span><i class="fas fa-users"></i> 10 Guests</span>
+              <span><i class="fas fa-bed"></i> 5 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹60,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="yacht-card" data-routes="mum-ele ele-mum mum-man man-mum" data-aos="fade-up" data-aos-delay="200">
+          <div class="yacht-img" onclick="openYachtDetail('dolphine')">
+            <img src="image/yacht_explore_images/dolphin.jpeg" alt="Dolphine yacht" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">Dolphine</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 60m</span>
+              <span><i class="fas fa-users"></i> 18 Guests</span>
+              <span><i class="fas fa-bed"></i> 9 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Elephanta</span>
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹60,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="yacht-card" data-routes="mum-ele ele-mum mum-man man-mum" data-aos="fade-up" data-aos-delay="0">
+          <div class="yacht-img" onclick="openYachtDetail('shorething')">
+            <img src="image/yacht_explore_images/shorething.jpeg" alt="Shorething yacht" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">Shorething</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 45m</span>
+              <span><i class="fas fa-users"></i> 12 Guests</span>
+              <span><i class="fas fa-bed"></i> 6 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Elephanta</span>
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹27,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="yacht-card" data-routes="mum-man man-mum" data-aos="fade-up" data-aos-delay="200">
+          <div class="yacht-img" onclick="openYachtDetail('westcoast')">
+            <img src="image/yacht_explore_images/west_coast_marine.jpeg" alt="West Coast Marine yacht" loading="lazy" />
+            <div class="yacht-badge gold">PREMIUM</div>
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">West Coast Marine Express</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 60m</span>
+              <span><i class="fas fa-users"></i> 18 Guests</span>
+              <span><i class="fas fa-bed"></i> 9 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹14,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="yacht-card" data-routes="mum-ele ele-mum mum-man man-mum" data-aos="fade-up" data-aos-delay="150">
+          <div class="yacht-img" onclick="openYachtDetail('a2b')">
+            <img src="image/yacht_explore_images/a2b.jpeg" alt="A2B yacht" loading="lazy" />
+            <div class="yacht-overlay"><span class="quick-view">Explore Yacht</span></div>
+          </div>
+          <div class="yacht-info">
+            <h3 class="yacht-name">A2B</h3>
+            <div class="yacht-specs">
+              <span><i class="fas fa-ruler-combined"></i> 50m</span>
+              <span><i class="fas fa-users"></i> 14 Guests</span>
+              <span><i class="fas fa-bed"></i> 7 Cabins</span>
+            </div>
+            <div class="route-chips">
+              <span class="route-chip">Mumbai ⇄ Elephanta</span>
+              <span class="route-chip">Mumbai ⇄ Mandwa</span>
+            </div>
+            <div class="yacht-footer">
+              <div class="yacht-price"><span class="from">From</span><span class="price">₹10,000 <em>/day</em></span></div>
+              <a href="#contact" class="btn-yacht">Book Yacht</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reverse-leg routes: no yachts assigned yet, concierge arranges on request -->
+      <div class="route-empty" id="mumbaiRouteEmpty" style="display:none;">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3 id="mumbaiRouteEmptyTitle">Route Coming Soon</h3>
+        <p>We're finalising the fleet line-up for this return leg. Get in touch and our concierge team will arrange a bespoke return charter for you.</p>
+        <a href="#contact" class="btn-primary"><span>Enquire Now</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- GOA PANEL (coming soon) -->
+    <div class="dest-panel" id="panel-goa">
+      <div class="route-empty" data-aos="fade-up">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Goa Routes Coming Soon</h3>
+        <p>We're finalising our Goa fleet and route line-up. Get in touch and our concierge team will arrange a bespoke Goa charter for you.</p>
+        <a href="#contact" class="btn-primary"><span>Enquire About Goa</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ DESTINATIONS ═══ -->
+<section id="destinations" class="section destinations-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="section-eyebrow">Our Home Waters</p>
+      <h2 class="section-title">Charter Destinations</h2>
+      <p class="section-desc">We specialise in India's most breathtaking coastal destinations Mumbai's glittering skyline and Goa's paradise shores.</p>
+    </div>
+    <div class="dest-grid dest-grid-duo">
+      <div class="dest-card dest-large" data-aos="fade-right">
+        <img src="image/destination/mumbai.png" alt="Mumbai yacht charter" loading="lazy" />
+        <div class="dest-overlay">
+          <div class="dest-info">
+            <p class="dest-region">⚓ Arabian Sea · Maharashtra</p>
+            <h3 class="dest-name">Mumbai</h3>
+            <p class="dest-desc">Cruise past the iconic Gateway of India, Marine Drive's Queen's Necklace, and discover Elephanta Island by private yacht. Sunset harbour cruises and the city's skyline are breathtaking from open waters.</p>
+            <a href="javascript:void(0)" class="dest-cta" onclick="openDestDetail('mumbai')">Explore Mumbai →</a>
+          </div>
+        </div>
+      </div>
+      <div class="dest-card dest-large" data-aos="fade-left">
+        <img src="image/destination/goa.png" alt="Goa yacht charter" loading="lazy" />
+        <div class="dest-overlay">
+          <div class="dest-info">
+            <p class="dest-region">🌴 Konkan Coast · Goa</p>
+            <h3 class="dest-name">Goa</h3>
+            <p class="dest-desc">From Candolim and Calangute's vibrant north coast to Palolem and Agonda's hidden southern coves, plus golden sunset cruises on the iconic Mandovi River.</p>
+            <a href="javascript:void(0)" class="dest-cta" onclick="openDestDetail('goa')">Explore Goa →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="india-dest-note" data-aos="fade-up">
+      <div class="india-tag"><i class="fas fa-map-marker-alt"></i> Mumbai — Available Year Round</div>
+      <div class="india-tag"><i class="fas fa-map-marker-alt"></i> Goa — Available Year Round</div>
+      <div class="india-tag"><i class="fas fa-star"></i> 100% India-Based Fleet</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCES ═══ -->
+<section id="experiences" class="experiences-section exp-redesigned">
+  <div class="exp-bg-shapes">
+    <div class="exp-shape exp-shape1"></div>
+    <div class="exp-shape exp-shape2"></div>
+    <div class="exp-shape exp-shape3"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:2;">
+
+    <!-- Section Header -->
+    <div class="section-header exp-header-wrap" data-aos="fade-up" style="text-align:center;max-width:680px;margin:0 auto 4rem;">
+      <p class="section-eyebrow exp-eyebrow-new">Tailored For You</p>
+      <h2 class="section-title exp-title-new" style="text-align:center;">Luxury Experiences</h2>
+      <p class="section-desc exp-desc-new">Every charter is a bespoke journey crafted around your vision whether it's a whisper between two or a celebration of many.</p>
+    </div>
+
+    <!-- Feature card row: large left + 2 stacked right -->
+    <div class="exp-bento" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Large Feature Card -->
+      <div class="exp-bento-card exp-bento-lg" style="background-image:url('https://images.pexels.com/photos/20393210/pexels-photo-20393210.jpeg')">
+        <div class="exp-bento-overlay"></div>
+        <div class="exp-bento-badge"><i class="fas fa-briefcase"></i></div>
+        <div class="exp-bento-body">
+          <span class="exp-bento-tag">Most Popular</span>
+          <h3>Corporate Events</h3>
+          <p>Transform your business gathering into an unforgettable experience on Mumbai and Goa's open sea private meetings, team-building moments, and client entertainment elevated to new heights.</p>
+          <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('corporate')">Explore Experience <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Right stack -->
+      <div class="exp-bento-stack">
+        <div class="exp-bento-card exp-bento-sm" style="background-image:url('https://images.pexels.com/photos/26986258/pexels-photo-26986258.jpeg')">
+          <div class="exp-bento-overlay"></div>
+          <div class="exp-bento-badge exp-bento-badge-rose"><i class="fas fa-heart"></i></div>
+          <div class="exp-bento-body">
+            <h3>Romantic Cruises</h3>
+            <p>Propose under Mumbai's starlit skyline or celebrate in Goa's golden waters.</p>
+            <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('romantic')">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="exp-bento-card exp-bento-sm" style="background-image:url('https://images.pexels.com/photos/10955637/pexels-photo-10955637.jpeg')">
+          <div class="exp-bento-overlay"></div>
+          <div class="exp-bento-badge exp-bento-badge-gold"><i class="fas fa-champagne-glasses"></i></div>
+          <div class="exp-bento-body">
+            <h3>Private Celebrations</h3>
+            <p>Birthdays, milestones & bespoke parties with premium catering on the Arabian Sea.</p>
+            <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('celebrations')">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row: 3 equal cards -->
+    <div class="exp-bento-row3" data-aos="fade-up" data-aos-delay="200">
+      <div class="exp-bento-card exp-bento-md" style="background-image:url('https://images.pexels.com/photos/5368745/pexels-photo-5368745.jpeg')">
+        <div class="exp-bento-overlay"></div>
+        <div class="exp-bento-badge exp-bento-badge-teal"><i class="fas fa-child"></i></div>
+        <div class="exp-bento-body">
+          <h3>Family Vacations</h3>
+          <p>Water toys, dedicated crew, and family-friendly itineraries along India's coastline.</p>
+          <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('family')">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="exp-bento-card exp-bento-md" style="background-image:url('https://images.pexels.com/photos/18649940/pexels-photo-18649940.jpeg')">
+        <div class="exp-bento-overlay"></div>
+        <div class="exp-bento-badge exp-bento-badge-purple"><i class="fas fa-camera"></i></div>
+        <div class="exp-bento-body">
+          <h3>Film & Photography</h3>
+          <p>Cinematic productions and luxury editorial shoots across Mumbai harbour & Goa.</p>
+          <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('film')">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="exp-bento-card exp-bento-md" style="background-image:url('https://images.pexels.com/photos/4939384/pexels-photo-4939384.jpeg')">
+        <div class="exp-bento-overlay"></div>
+        <div class="exp-bento-badge exp-bento-badge-green"><i class="fas fa-spa"></i></div>
+        <div class="exp-bento-body">
+          <h3>Wellness Retreats</h3>
+          <p>Sunrise yoga on deck, onboard spa treatments, and pure ocean air revitalisation.</p>
+          <a href="javascript:void(0)" class="exp-bento-link" onclick="openExpDetail('wellness')">Explore <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ WHY NANDA ═══ -->
+<section id="about" class="section why-section">
+  <div class="container">
+    <!-- Centred heading block -->
+    <div class="why-heading-block" data-aos="fade-up">
+      <p class="section-eyebrow why-eyebrow">Why Nanda Yacht Luxury</p>
+      <h2 class="section-title why-title">India's Gold Standard<br>in Yacht Charters</h2>
+      <p class="why-desc why-desc-center" style="text-align:center;margin:0 auto 1.5rem;max-width:700px;">Since 2012, Nanda Yacht Luxury has set the benchmark for private yacht charters across Mumbai and Goa. Our fleet, crew, and concierge team are held to the highest standards of excellence ensuring every voyage on Indian waters exceeds every expectation.</p>
+      <div class="why-badges why-badges-center" style="justify-content:center;display:flex;flex-wrap:wrap;gap:0.8rem;">
+        <div class="badge"><i class="fas fa-award"></i> ISO Certified</div>
+        <div class="badge"><i class="fas fa-shield-alt"></i> Fully Insured</div>
+        <div class="badge"><i class="fas fa-star"></i> 5-Star Rated</div>
+        <div class="badge"><i class="fas fa-map-marker-alt"></i> Mumbai & Goa</div>
+      </div>
+      <a href="#contact" class="btn-primary" style="margin-top:2rem;display:inline-flex"><span>Book a Consultation</span><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <!-- Stats grid -->
+    <div class="why-stats-grid why-stats-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="0">
+        <div class="wstat-icon"><i class="fas fa-ship"></i></div>
+        <div class="wstat-num counter" data-count="10">0</div>
+        <div class="wstat-label">Luxury Yachts</div>
+      </div>
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="100">
+        <div class="wstat-icon"><i class="fas fa-headset"></i></div>
+        <div class="wstat-num">24/7</div>
+        <div class="wstat-label">Concierge Service</div>
+      </div>
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="200">
+        <div class="wstat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="wstat-num">2</div>
+        <div class="wstat-label">Prime Locations</div>
+      </div>
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="300">
+        <div class="wstat-icon"><i class="fas fa-users"></i></div>
+        <div class="wstat-num counter" data-count="50">0</div>
+        <div class="wstat-label">Happy Guests</div>
+      </div>
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="400">
+        <div class="wstat-icon"><i class="fas fa-anchor"></i></div>
+        <div class="wstat-num counter" data-count="2">0</div>
+        <div class="wstat-label">Years Experience</div>
+      </div>
+      <div class="why-stat" data-aos="zoom-in" data-aos-delay="500">
+        <div class="wstat-icon"><i class="fas fa-star"></i></div>
+        <div class="wstat-num">4.9</div>
+        <div class="wstat-label">Average Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testimonials-section testi-redesigned">
+  <!-- Sky-blue wave top -->
+  <div class="testi-wave-top">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,80 1080,0 1440,40 L1440,0 L0,0 Z" fill="#EEF5FB"/></svg>
+  </div>
+  <!-- Floating bubbles decoration -->
+  <div class="testi-bubbles">
+    <span class="tb tb1"></span><span class="tb tb2"></span><span class="tb tb3"></span>
+    <span class="tb tb4"></span><span class="tb tb5"></span>
+  </div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="section-header" data-aos="fade-up">
+      <p class="section-eyebrow testi-eyebrow-new">Guest Stories</p>
+      <h2 class="section-title testi-title-new">Words from the Sea</h2>
+      <p class="section-desc testi-desc-new">Real experiences, Real emotions, Straight from the hearts of our guests.</p>
+    </div>
+    <!-- Rating summary bar -->
+    <div class="testi-rating-bar" data-aos="fade-up">
+      <div class="trb-score">4.9 <span>/ 5</span></div>
+      <div class="trb-stars">★★★★★</div>
+      <div class="trb-label">Based on 2,500+ voyages across Mumbai & Goa</div>
+    </div>
+    <div class="swiper testimonials-swiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testi-card testi-card-new">
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testi-stars testi-stars-new">★★★★★</div>
+            <p class="testi-text testi-text-new">"An absolutely transformative experience on Mumbai's waters. The crew's attention to every detail was extraordinary — from the welcome cocktails at Gateway of India to the private sunset anchorage near Elephanta. Nanda set a benchmark we've never seen before."</p>
+            <div class="testi-author testi-author-new">
+              <div class="testi-avatar testi-avatar-new">RK</div>
+              <div>
+                <div class="testi-name testi-name-new">Rajesh Khanna</div>
+                <div class="testi-role testi-role-new"><i class="fas fa-map-marker-alt"></i> CEO, Mumbai — Gateway Sunset Charter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-card testi-card-new">
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testi-stars testi-stars-new">★★★★★</div>
+            <p class="testi-text testi-text-new">"We chartered for our anniversary in Goa — sailing from Panaji to Palolem was simply magical. The Michelin-trained chef, the seamless service, the breathtaking Goan coastline. Nanda created memories for a lifetime."</p>
+            <div class="testi-author testi-author-new">
+              <div class="testi-avatar testi-avatar-new">SP</div>
+              <div>
+                <div class="testi-name testi-name-new">Sneha & Prateek Sharma</div>
+                <div class="testi-role testi-role-new"><i class="fas fa-map-marker-alt"></i> Delhi — Goa Anniversary Charter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-card testi-card-new">
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testi-stars testi-stars-new">★★★★★</div>
+            <p class="testi-text testi-text-new">"Our corporate retreat aboard the Azure Dream along Mumbai's coastline was spectacular. The team building on deck, the private beach landing — our entire board left inspired and invigorated. Highly recommended for any corporate event."</p>
+            <div class="testi-author testi-author-new">
+              <div class="testi-avatar testi-avatar-new">AM</div>
+              <div>
+                <div class="testi-name testi-name-new">Ananya Mehta</div>
+                <div class="testi-role testi-role-new"><i class="fas fa-map-marker-alt"></i> Director, Tata Ventures — Mumbai Corporate Charter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-card testi-card-new">
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testi-stars testi-stars-new">★★★★★</div>
+            <p class="testi-text testi-text-new">"The Goa island-hopping itinerary Nanda curated for our family was pure perfection. Hidden coves of South Goa, spectacular sunsets, and a crew that anticipated every need. I've chartered globally and Nanda stands in a class of their own."</p>
+            <div class="testi-author testi-author-new">
+              <div class="testi-avatar testi-avatar-new">DP</div>
+              <div>
+                <div class="testi-name testi-name-new">David & Priya Patel</div>
+                <div class="testi-role testi-role-new"><i class="fas fa-map-marker-alt"></i> Bangalore — Goa Family Charter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <div class="testi-wave-bottom">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="#EEF5FB"/></svg>
+  </div>
+</section>
+
+<!-- ═══ APP ═══ -->
+<section class="section app-section">
+  <div class="container app-inner">
+    <div class="app-left" data-aos="fade-right">
+      <p class="section-eyebrow">Your Charter, Anywhere</p>
+      <h2 class="section-title">Nanda Luxury Yacht<br>Mobile App</h2>
+      <p class="app-desc">Browse our Mumbai and Goa fleet, manage your charter, communicate with your crew, and explore Indian coastal destinations all from the palm of your hand.</p>
+      <ul class="app-features">
+        <li><i class="fas fa-check-circle"></i> Real-time fleet availability in Mumbai & Goa</li>
+        <li><i class="fas fa-check-circle"></i> Instant booking & price quotes</li>
+        <li><i class="fas fa-check-circle"></i> 24/7 concierge chat</li>
+        <li><i class="fas fa-check-circle"></i> Route & itinerary planning</li>
+        <li><i class="fas fa-check-circle"></i> Weather updates</li>
+      </ul>
+      <div class="app-btns">
+        <a href="https://play.google.com/store/apps/details?id=com.aditya.nandaluxuryyachts&hl=en_IN" target="_blank" class="store-btn">
+          <i class="fab fa-google-play"></i>
+          <div><span>Get it on</span><strong>Google Play</strong></div>
+        </a>
+        <a href="https://apps.apple.com/us/app/nanda-luxury-yachts/id6754792105" target="_blank" class="store-btn">
+          <i class="fab fa-apple"></i>
+          <div><span>Download on the</span><strong>App Store</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="app-right" data-aos="fade-left">
+      <div class="phone-mockup floating-phone">
+        <!-- iPhone 17 Frame -->
+        <div style="
+          position:relative;
+          width:280px;
+          background:linear-gradient(160deg,#E8E8E8 0%,#C8C8C8 30%,#D8D8D8 60%,#B0B0B0 100%);
+          border-radius:52px;
+          padding:14px;
+          box-shadow:
+            0 0 0 1px rgba(0,0,0,0.18),
+            inset 0 0 0 1px rgba(255,255,255,0.55),
+            0 40px 90px rgba(41,171,226,0.35),
+            0 20px 40px rgba(0,0,0,0.28);
+        ">
+          <!-- Side buttons left -->
+          <div style="position:absolute;left:-4px;top:100px;width:4px;height:36px;background:linear-gradient(180deg,#C0C0C0,#A8A8A8);border-radius:3px 0 0 3px;box-shadow:-2px 0 4px rgba(0,0,0,0.2);"></div>
+          <div style="position:absolute;left:-4px;top:148px;width:4px;height:60px;background:linear-gradient(180deg,#C0C0C0,#A8A8A8);border-radius:3px 0 0 3px;box-shadow:-2px 0 4px rgba(0,0,0,0.2);"></div>
+          <div style="position:absolute;left:-4px;top:220px;width:4px;height:60px;background:linear-gradient(180deg,#C0C0C0,#A8A8A8);border-radius:3px 0 0 3px;box-shadow:-2px 0 4px rgba(0,0,0,0.2);"></div>
+          <!-- Power button right -->
+          <div style="position:absolute;right:-4px;top:155px;width:4px;height:80px;background:linear-gradient(180deg,#C0C0C0,#A8A8A8);border-radius:0 3px 3px 0;box-shadow:2px 0 4px rgba(0,0,0,0.2);"></div>
+          <!-- Inner screen bezel -->
+          <div style="
+            background:#000;
+            border-radius:40px;
+            padding:2px;
+            overflow:hidden;
+          ">
+            <!-- Screen -->
+            <div style="
+              background:linear-gradient(160deg,var(--sky-pale),#fff);
+              border-radius:38px;
+              overflow:hidden;
+              position:relative;
+              min-height:540px;
+            ">
+              <!-- Dynamic Island -->
+              <div style="
+                position:absolute;top:14px;left:50%;transform:translateX(-50%);
+                width:110px;height:32px;
+                background:#000;
+                border-radius:20px;
+                z-index:10;
+                display:flex;align-items:center;justify-content:center;gap:8px;
+              ">
+                <div style="width:10px;height:10px;border-radius:50%;background:#111;border:1.5px solid #333;"></div>
+                <div style="width:6px;height:6px;border-radius:50%;background:#1a1a2e;opacity:0.8;"></div>
+              </div>
+
+              <!-- Status bar -->
+              <div style="height:56px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 20px 8px;font-size:11px;font-weight:700;color:var(--sky-deep);">
+                <span>9:41</span>
+                <div style="display:flex;gap:5px;align-items:center;">
+                  <i class="fas fa-signal" style="font-size:10px;"></i>
+                  <i class="fas fa-wifi" style="font-size:10px;"></i>
+                  <i class="fas fa-battery-three-quarters" style="font-size:10px;"></i>
+                </div>
+              </div>
+
+              <!-- App Header with Logo -->
+              <div style="
+                background:linear-gradient(135deg,var(--sky-deep),var(--sky));
+                padding:12px 16px;
+                display:flex;align-items:center;justify-content:space-between;
+              ">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <img src="image/nanda-logo.png" alt="Logo" style="height:30px;width:30px;object-fit:contain;border-radius:6px;background:white;padding:3px;" />
+                  <div>G
+                    <div style="color:white;font-size:9px;font-weight:900;letter-spacing:0.02em;">NANDA LUXURY YACHT</div>
+                    <div style="color:rgba(255,255,255,0.7);font-size:7.5px;font-weight:600;">Mumbai & Goa</div>
+                  </div>
+                </div>
+                <i class="fas fa-bell" style="color:white;font-size:13px;"></i>
+              </div>
+
+              <!-- Hero image -->
+              <div style="position:relative;aspect-ratio:16/9;">
+                <img src="image/yacht_explore_images/allegra.jpeg" alt="Yacht" style="width:100%;height:100%;object-fit:cover;" />
+                <div style="
+                  position:absolute;inset:0;
+                  background:linear-gradient(to top,rgba(6,78,120,0.92) 0%,transparent 55%);
+                  padding:10px 12px;
+                  display:flex;flex-direction:column;justify-content:flex-end;
+                ">
+                  <div style="color:rgba(255,255,255,0.8);font-size:7.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:2px;">⭐ PREMIUM</div>
+                  <div style="color:white;font-size:13px;font-weight:900;">Allegra</div>
+                  <div style="color:var(--sky-light);font-size:9px;font-weight:700;">From ₹1,75,000/day · 8 Guests</div>
+                </div>
+              </div>
+
+              <!-- Location chips -->
+              <div style="display:flex;gap:6px;padding:10px 12px 6px;">
+                <div style="background:var(--sky);color:white;padding:4px 10px;border-radius:20px;font-size:8px;font-weight:800;display:flex;align-items:center;gap:4px;">
+                  <i class="fas fa-map-marker-alt" style="font-size:7px;"></i> Mumbai
+                </div>
+                <div style="background:var(--sky-pale);color:var(--sky-dark);padding:4px 10px;border-radius:20px;font-size:8px;font-weight:800;border:1px solid var(--border);display:flex;align-items:center;gap:4px;">
+                  <i class="fas fa-map-marker-alt" style="font-size:7px;"></i> Goa
+                </div>
+                <div style="background:var(--sky-pale);color:var(--sky-dark);padding:4px 10px;border-radius:20px;font-size:8px;font-weight:800;border:1px solid var(--border);">All</div>
+              </div>
+
+              <!-- Mini cards -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px 12px 10px;">
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">Shorething</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹27,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">Bug me</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹60,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">A2B</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹10,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">Dolphine</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹60,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">Live &amp; Let Live</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹60,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                <div style="background:white;border-radius:10px;padding:8px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(41,171,226,0.1);">
+                  <div style="font-size:7.5px;font-weight:800;color:var(--sky-dark);margin-bottom:2px;">Passages</div>
+                  <div style="font-size:7px;color:var(--text-light);font-weight:600;">₹60,000/day · Mumbai</div>
+                  <div style="margin-top:4px;background:var(--sky);color:white;text-align:center;border-radius:5px;padding:2px;font-size:7px;font-weight:800;">Book</div>
+                </div>
+                
+              </div>
+
+              <!-- CTA -->
+              <div style="margin:0 12px 14px;background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:white;padding:10px;border-radius:12px;text-align:center;font-size:9px;font-weight:900;letter-spacing:0.06em;box-shadow:0 4px 15px rgba(41,171,226,0.4);">
+                <i class="fas fa-ship" style="margin-right:5px;"></i> BOOK YOUR YACHT NOW
+              </div>
+
+              <!-- Home indicator -->
+              <div style="display:flex;justify-content:center;padding-bottom:8px;">
+                <div style="width:100px;height:4px;background:var(--sky-dark);border-radius:3px;opacity:0.4;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="section-eyebrow">Set Sail With Us</p>
+      <h2 class="section-title">Begin Your Journey</h2>
+      <p class="section-desc">Our charter specialists are standing by to craft your perfect voyage in Mumbai or Goa. We respond within 2 hours.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-form-wrap" data-aos="fade-right">
+        <div class="form-header">
+          <h3>Charter Enquiry</h3>
+          <p>All fields marked * are required.</p>
+        </div>
+        <div class="luxury-form" id="charterForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Your last name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Destination</label>
+              <select>
+                <option value="">Select destination</option>
+                <option>Mumbai</option>
+                <option>Goa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Charter Type</label>
+              <select>
+                <option value="">Select type</option>
+                <option>Day Charter</option>
+                <option>Weekend Getaway</option>
+                <option>Week Charter</option>
+                <option>Corporate Event</option>
+                <option>Custom Itinerary</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Dates</label>
+              <input type="date" />
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <input type="number" placeholder="e.g. 8" min="1" max="50" />
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Message / Special Requirements</label>
+            <textarea placeholder="Tell us about your dream charter experience — special occasions, dietary requirements, activities, or any other requests..." rows="4"></textarea>
+          </div>
+          <button type="button" class="btn-submit" onclick="submitForm()">
+            <span>Send Enquiry</span><i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! Your enquiry has been received. Our team will contact you within 2 hours.</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info-wrap" data-aos="fade-left">
+        <div class="contact-info-card">
+          <h3>Get in Touch</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="ci-label">Phone</div>
+                <div class="ci-value"><a href="tel:+919766426758">+91 97664 26758</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value"><a href="mailto:info@nandayacht.com">info@nandayacht.com</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="ci-label">Mumbai Office</div>
+                <div class="ci-value">Jetty No. 5 Opposite Taj Mahal Palace Hotel<br> Apollo Bandar, Colaba, Mumbai — 400001</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="ci-label">Goa Office</div>
+                <div class="ci-value">Panjim, Goa — 403001</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <div class="ci-label">Availability</div>
+                <div class="ci-value">24 / 7 — 365 Days a Year</div>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/919766426758" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5!2d72.8213!3d18.9413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU2JzI5LjEiTiA3MsKwNDknMTYuNiJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <span class="footer-logo-badge">
+            <img src="image/nanda-logo.png" alt="Nanda Yacht Luxury" class="footer-logo-img" />
+          </span>
+          <span class="footer-logo-text">
+            <span class="footer-logo-main">Nanda Luxury Yacht</span>
+            <span class="footer-logo-sub">Mumbai &amp; Goa</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Setting the gold standard in private yacht charters in Mumbai & Goa since 2026. Excellence is not a goal, it is our promise.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#destinations">Mumbai</a></li>
+          <li><a href="#destinations">Goa</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Receive exclusive offers, new yacht launches, and charter news from Mumbai & Goa.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="footer-certifications">
+          <span class="cert"><i class="fas fa-shield-alt"></i> Secure</span>
+          <span class="cert"><i class="fas fa-lock"></i> SSL</span>
+          <span class="cert"><i class="fas fa-award"></i> IYBA Member</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Nanda Yacht Luxury. All Rights Reserved. Mumbai & Goa's Premier Charter Service.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ YACHT EXPLORE — FULL DETAIL PAGE ═══ -->
+<div class="yacht-detail-page" id="yachtDetailPage">
+  <div class="yd-hero">
+    <img id="ydHeroImg" src="" alt="" />
+    <div class="yd-hero-scrim"></div>
+    <button class="yd-back" onclick="closeYachtDetail()"><i class="fas fa-arrow-left"></i> Back to Fleet</button>
+    <div class="yd-hero-content">
+      <p class="yd-eyebrow" id="ydEyebrow">Nanda Luxury Yacht · Mumbai</p>
+      <h1 class="yd-name" id="ydName">Yacht Name</h1>
+      <p class="yd-tagline" id="ydTagline">Tagline</p>
+      <div class="yd-quickstats" id="ydQuickStats"></div>
+    </div>
+  </div>
+
+  <div class="yd-body">
+    <div class="container yd-grid">
+      <div class="yd-main">
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Overview</p>
+          <h2>About This Yacht</h2>
+          <p class="yd-desc" id="ydDescription"></p>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Gallery</p>
+          <h2>Photo Tour</h2>
+          <div class="gallery-carousel" id="ydGallery">
+            <div class="gc-viewport"><div class="gc-track"></div></div>
+            <button class="gc-btn gc-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+            <button class="gc-btn gc-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+            <span class="gc-counter"></span>
+            <div class="gc-dots"></div>
+          </div>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Specifications</p>
+          <h2>Vessel Details</h2>
+          <div class="yd-specs-grid" id="ydSpecsGrid"></div>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Onboard Experience</p>
+          <h2>Amenities &amp; Features</h2>
+          <div class="yd-amenities" id="ydAmenities"></div>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Sail With Us</p>
+          <h2>Available Routes</h2>
+          <div class="yd-routes" id="ydRoutes"></div>
+        </section>
+      </div>
+
+      <aside class="yd-sidebar">
+        <div class="yd-book-card">
+          <span class="yd-book-label">Charter From</span>
+          <div class="yd-book-price"><span id="ydPrice"></span><em>/day</em></div>
+          <a href="#contact" class="btn-gold yd-book-btn" onclick="closeYachtDetail()">
+            <span>Book This Yacht</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/919766426758" target="_blank" rel="noopener" class="yd-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <ul class="yd-trust-list">
+            <li><i class="fas fa-shield-alt"></i> Verified &amp; Insured Fleet</li>
+            <li><i class="fas fa-user-tie"></i> Professional Crew Included</li>
+            <li><i class="fas fa-clock"></i> 24/7 Concierge Support</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DESTINATION EXPLORE — FULL DETAIL PAGE ═══ -->
+<div class="yacht-detail-page" id="destDetailPage">
+  <div class="yd-hero">
+    <img id="ddHeroImg" src="" alt="" />
+    <div class="yd-hero-scrim"></div>
+    <button class="yd-back" onclick="closeDestDetail()"><i class="fas fa-arrow-left"></i> Back to Destinations</button>
+    <div class="yd-hero-content">
+      <p class="yd-eyebrow" id="ddRegion">Nanda Luxury Yacht</p>
+      <h1 class="yd-name" id="ddName">Destination</h1>
+      <p class="yd-tagline" id="ddTagline">Tagline</p>
+      <div class="yd-quickstats" id="ddQuickStats"></div>
+    </div>
+  </div>
+
+  <div class="yd-body">
+    <div class="container yd-grid">
+      <div class="yd-main">
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Overview</p>
+          <h2 id="ddOverviewTitle">Why Sail Here</h2>
+          <p class="yd-desc" id="ddDescription1"></p>
+          <p class="yd-desc" id="ddDescription2" style="margin-top:1rem;"></p>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Gallery</p>
+          <h2>Explore in Pictures</h2>
+          <div class="gallery-carousel" id="ddGallery">
+            <div class="gc-viewport"><div class="gc-track"></div></div>
+            <button class="gc-btn gc-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+            <button class="gc-btn gc-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+            <span class="gc-counter"></span>
+            <div class="gc-dots"></div>
+          </div>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">On This Charter</p>
+          <h2>Destination Highlights</h2>
+          <div class="yd-amenities" id="ddHighlights"></div>
+        </section>
+      </div>
+
+      <aside class="yd-sidebar">
+        <div class="yd-book-card">
+          <span class="yd-book-label">Plan Your Voyage</span>
+          <div class="yd-book-price"><span id="ddPriceLabel">Bespoke Charters</span></div>
+          <a href="#contact" class="btn-gold yd-book-btn" onclick="closeDestDetail()">
+            <span>Enquire Now</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/919766426758" target="_blank" rel="noopener" class="yd-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <ul class="yd-trust-list">
+            <li><i class="fas fa-shield-alt"></i> Verified &amp; Insured Fleet</li>
+            <li><i class="fas fa-user-tie"></i> Professional Crew Included</li>
+            <li><i class="fas fa-clock"></i> 24/7 Concierge Support</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ EXPERIENCE EXPLORE — FULL DETAIL PAGE ═══ -->
+<div class="yacht-detail-page" id="expDetailPage">
+  <div class="yd-hero">
+    <img id="edHeroImg" src="" alt="" />
+    <div class="yd-hero-scrim"></div>
+    <button class="yd-back" onclick="closeExpDetail()"><i class="fas fa-arrow-left"></i> Back to Experiences</button>
+    <div class="yd-hero-content">
+      <p class="yd-eyebrow">Nanda Luxury Yacht · Experience</p>
+      <h1 class="yd-name" id="edName">Experience</h1>
+      <p class="yd-tagline" id="edTagline">Tagline</p>
+    </div>
+  </div>
+
+  <div class="yd-body">
+    <div class="container yd-grid">
+      <div class="yd-main">
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Overview</p>
+          <h2>The Experience</h2>
+          <p class="yd-desc" id="edDescription"></p>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">Gallery</p>
+          <h2>See It Unfold</h2>
+          <div class="gallery-carousel" id="edGallery">
+            <div class="gc-viewport"><div class="gc-track"></div></div>
+            <button class="gc-btn gc-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+            <button class="gc-btn gc-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+            <span class="gc-counter"></span>
+            <div class="gc-dots"></div>
+          </div>
+        </section>
+
+        <section class="yd-section" data-aos="fade-up">
+          <p class="yd-kicker">What's Included</p>
+          <h2>Experience Highlights</h2>
+          <div class="yd-amenities" id="edHighlights"></div>
+        </section>
+      </div>
+
+      <aside class="yd-sidebar">
+        <div class="yd-book-card">
+          <span class="yd-book-label">Ready to Book</span>
+          <div class="yd-book-price"><span>Bespoke Pricing</span></div>
+          <a href="#contact" class="btn-gold yd-book-btn" onclick="closeExpDetail()">
+            <span>Charter Now</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/919766426758" target="_blank" rel="noopener" class="yd-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <ul class="yd-trust-list">
+            <li><i class="fas fa-shield-alt"></i> Verified &amp; Insured Fleet</li>
+            <li><i class="fas fa-user-tie"></i> Professional Crew Included</li>
+            <li><i class="fas fa-clock"></i> 24/7 Concierge Support</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- FABs -->
+<a href="https://wa.me/919766426758" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
