@@ -8,13 +8,11 @@ if (typeof AOS !== 'undefined') {
 
 /* ═══ NAVBAR ═══ */
 const navbar = document.getElementById('navbar');
-const topbar = document.getElementById('topbar');
 const backToTopBtn = document.getElementById('backToTop');
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   if (navbar) navbar.classList.toggle('scrolled', scrollY > 80);
-  if (topbar) topbar.classList.toggle('hidden', scrollY > 200);
   if (backToTopBtn) backToTopBtn.classList.toggle('visible', scrollY > 400);
   lastScroll = scrollY;
 });
