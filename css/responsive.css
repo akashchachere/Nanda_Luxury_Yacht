@@ -1,0 +1,300 @@
+/* ═══════════════════════════════════════════════════════════
+   NANDA YACHT LUXURY — RESPONSIVE OPTIMIZATION LAYER
+   Loaded AFTER style.css. Does not change branding, colors,
+   copy, or animations — only fixes/refines layout behaviour
+   across Android, iPhone (incl. Dynamic Island), tablets,
+   laptops and large desktops.
+
+   Breakpoint map used throughout:
+     ≥1921px  Large / ultrawide desktop
+     1440–1920 Desktop
+     1024–1439 Laptop
+     768–1023  Tablet
+     481–767   Large phones
+     361–480   Standard phones
+     ≤360      Small / narrow phones (e.g. iPhone SE, older Android)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── 0. GLOBAL SAFETY NETS ─── */
+html, body { max-width: 100%; overflow-x: hidden; }
+*, *::before, *::after { min-width: 0; }
+img, video { max-width: 100%; height: auto; }
+
+/* iPhone notch / Dynamic Island safe-area support.
+   (viewport-fit=cover is added in index.html) */
+.site-header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.whatsapp-fab {
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.5rem + env(safe-area-inset-right, 0px));
+}
+.back-to-top {
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.5rem + env(safe-area-inset-right, 0px));
+}
+.mobile-menu {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Bigger, more reliable touch targets on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hamburger { padding: 10px; }
+  .nav-links a, .footer-links li a, .dest-toggle-btn, .route-btn,
+  .gc-btn, .lightbox-close, .lightbox-prev, .lightbox-next,
+  .social-links a, .back-to-top, .whatsapp-fab { min-height: 40px; }
+  .gc-dot, .hero-dot { padding: 6px; background-clip: content-box; }
+}
+
+/* ═══ 1. ULTRAWIDE / LARGE DESKTOP (≥1921px) ═══
+   Keep the design from stretching edge-to-edge on very wide monitors. */
+@media (min-width: 1921px) {
+  .container, .nav-container, .hero-content, .hero-bottom-bar,
+  .search-bar, .slide-label { max-width: 1520px; }
+  .hero-headline { font-size: clamp(4rem, 6vw, 8rem); }
+}
+
+/* ═══ 2. LAPTOP (1024–1440px) — fine-tuning only ═══ */
+@media (max-width: 1440px) {
+  .container, .nav-container, .hero-content, .hero-bottom-bar, .search-bar {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1279px) {
+  .exp-bento-lg { min-height: 420px !important; }
+  .exp-bento-sm { min-height: 190px !important; }
+}
+
+/* ═══ 3. TABLET (768–1023px) ═══
+   Nav already collapses to hamburger at 1024px (existing rule).
+   Everything below tightens spacing + fixes grids the original
+   CSS never addressed at this width. */
+@media (max-width: 1023px) {
+  .section { padding: 4.5rem 0; }
+  .container { padding: 0 1.5rem; }
+
+  .hero { padding-top: 88px; }
+  .hero-content { padding: 0 1.5rem; padding-top: 1.5rem; padding-bottom: 80px; }
+  .hero-headline { font-size: clamp(2.6rem, 6.5vw, 4.2rem); }
+  .hero-tagline { max-width: 100%; }
+
+  /* Bento experience grid never had a stacking rule at all — fix it */
+  .exp-bento { grid-template-columns: 1fr 1fr !important; }
+  .exp-bento-row3 { grid-template-columns: 1fr 1fr !important; }
+  .exp-bento-lg { min-height: 380px !important; grid-column: span 2; }
+
+  .why-inner, .app-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .phone-mockup { justify-content: center; }
+
+  .yd-grid { grid-template-columns: 1fr; }
+  .yd-sidebar { position: static; }
+
+  .gc-slide img { height: 380px; }
+}
+
+/* ═══ 4. LARGE PHONES (481–767px) ═══ */
+@media (max-width: 767px) {
+  .section { padding: 3.5rem 0; }
+  .container { padding: 0 1.25rem; }
+  #routes, #destinations, #experiences, #about, #contact { scroll-margin-top: 78px; }
+
+  /* Header */
+  .navbar { padding: 0.7rem 0; }
+  .nav-container { padding: 0 1.25rem; gap: 0.8rem; }
+  .logo-img { height: 42px; }
+  .logo-main { font-size: 1.15rem; }
+
+  /* Hero */
+  .hero { padding-top: 80px; min-height: 100svh; }
+  .hero-content { padding: 0 1.25rem; padding-top: 1.25rem; padding-bottom: 70px; align-items: flex-start; }
+  .hero-text-block { max-width: 100%; }
+  .hero-headline { font-size: clamp(2.1rem, 9vw, 2.8rem); line-height: 1.02; }
+  .hero-eyebrow { font-size: 0.68rem; margin-bottom: 0.9rem; }
+  .hero-tagline { font-size: 0.92rem; margin-bottom: 1.8rem; }
+  .hero-highlights { gap: 0.5rem; margin-bottom: 1.6rem; }
+  .hero-highlight { font-size: 0.72rem; padding: 0.45rem 0.85rem; }
+  .hero-btns { flex-direction: column; align-items: stretch; gap: 0.8rem; }
+  .btn-primary, .btn-outline { justify-content: center; padding: 0.85rem 1.5rem; font-size: 0.82rem; }
+  .hero-overlay-bottom { height: 130px; }
+  .hero-dots { bottom: 130px; right: 1.25rem; }
+  .slide-label { bottom: 140px; left: 1.25rem; width: calc(100% - 2.5rem); }
+  .slide-label-inner { font-size: 0.7rem; padding: 0.45rem 0.9rem; }
+
+  /* Section headers */
+  .section-header { margin-bottom: 2.6rem; }
+  .section-title { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+  .section-desc { font-size: 0.92rem; }
+
+  /* Fleet / routes */
+  .dest-toggle { gap: 0.6rem; }
+  .dest-toggle-btn { padding: 0.75rem 1.4rem; font-size: 0.82rem; flex: 1 1 auto; justify-content: center; }
+  .route-filter-bar { gap: 0.5rem; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 0.4rem; scrollbar-width: thin; }
+  .route-btn { flex-shrink: 0; }
+  .fleet-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+  .yacht-name { font-size: 1.2rem; }
+
+  /* Destinations */
+  .dest-grid, .dest-grid-duo { grid-template-columns: 1fr !important; }
+  .dest-large, .dest-grid-duo .dest-large { min-height: 260px !important; grid-column: span 1 !important; grid-row: span 1 !important; }
+  .dest-card:not(.dest-large) { min-height: 200px; }
+  .dest-name { font-size: 1.3rem; }
+  .dest-large .dest-name { font-size: 1.7rem; }
+  .india-dest-note { gap: 0.7rem; }
+
+  /* Experiences bento */
+  .experiences-section { padding: 4.5rem 0; }
+  .exp-bg-text { font-size: 3.2rem; }
+  .exp-bento, .exp-bento-row3 { grid-template-columns: 1fr !important; gap: 1rem !important; margin-bottom: 1rem !important; }
+  .exp-bento-stack { gap: 1rem !important; }
+  .exp-bento-lg { min-height: 300px !important; grid-column: span 1; }
+  .exp-bento-sm { min-height: 170px !important; }
+  .exp-bento-md { min-height: 220px !important; }
+  .exp-bento-body { padding: 1.3rem 1.3rem 1.1rem !important; }
+
+  /* Why Nanda */
+  .why-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .why-stat { padding: 1.4rem 0.8rem; }
+  .wstat-num { font-size: 1.6rem; }
+  .why-badges { gap: 0.6rem; }
+
+  /* Gallery carousel */
+  .gc-slide img { height: 260px; }
+  .gc-btn { width: 38px; height: 38px; font-size: 0.8rem; }
+  .gc-counter { font-size: 0.65rem; padding: 0.3rem 0.7rem; }
+
+  /* App section */
+  .app-inner { text-align: left; }
+  .phone-frame { width: 220px; }
+  .app-btns { flex-direction: column; }
+  .store-btn { justify-content: center; }
+
+  /* Testimonials */
+  .testimonials-section { padding: 4.5rem 0; }
+  .testi-card:not(.testi-card-new), .testi-card-new { padding: 1.8rem 1.5rem !important; }
+
+  /* Contact */
+  .contact-info-card { padding: 1.5rem; }
+
+  /* Footer */
+  .footer-top { padding: 3rem 0 2rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-brand, .footer-newsletter, .footer-links { grid-column: span 1 !important; }
+  .newsletter-form { flex-wrap: wrap; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; gap: 0.8rem; }
+  .footer-bottom-links { justify-content: center; flex-wrap: wrap; }
+
+  /* Yacht detail page */
+  .yd-hero { height: 46vh; min-height: 300px; }
+  .yd-hero-content { padding: 1.6rem 1.25rem 1.6rem; }
+  .yd-name { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+  .yd-tagline { font-size: 0.9rem; }
+  .yd-quickstats span { font-size: 0.72rem; padding: 0.45rem 0.85rem; }
+  .yd-body { padding: 2.2rem 0 3rem; }
+  .yd-specs-grid { grid-template-columns: repeat(2, 1fr); }
+  .yd-amenities { grid-template-columns: 1fr; }
+  .yd-book-card { padding: 1.4rem; }
+
+  /* Lightbox controls sized for thumbs */
+  .lightbox-close, .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 1.2rem; }
+  .lightbox-close { top: 1rem; right: 1rem; }
+  .lightbox-prev { left: 0.75rem; }
+  .lightbox-next { right: 0.75rem; }
+}
+
+/* ═══ 5. STANDARD PHONES (≤480px) — Android & most iPhones ═══ */
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .nav-container { padding: 0 1rem; }
+  .logo-img { height: 38px; }
+  .logo-main { font-size: 1.02rem; }
+
+  .hero-headline { font-size: clamp(1.9rem, 10vw, 2.4rem); }
+  .hero-highlight span { display: inline-block; max-width: 190px; }
+  .hero-highlights { flex-direction: column; align-items: flex-start; }
+  .hero-highlight { width: auto; }
+
+  .stat { min-width: 90px; padding: 0.7rem 0.9rem; }
+  .stat-num { font-size: 1.25rem; }
+
+  .section-title { font-size: clamp(1.5rem, 8vw, 2rem); }
+
+  .fleet-tabs { gap: 0.4rem; }
+  .tab { padding: 0.5rem 1rem; font-size: 0.74rem; }
+
+  .yacht-info { padding: 1.2rem; }
+  .yacht-footer { flex-wrap: wrap; gap: 0.6rem; }
+
+  .why-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+  .why-stat { padding: 1.1rem 0.6rem; }
+  .wstat-icon { width: 40px; height: 40px; font-size: 0.95rem; }
+  .wstat-num { font-size: 1.35rem; }
+  .wstat-label { font-size: 0.62rem; }
+
+  .form-header h3 { font-size: 1.25rem; }
+  .btn-submit { padding: 0.9rem 1.5rem; font-size: 0.82rem; }
+
+  .footer-logo-main { font-size: 1.1rem; }
+  .footer-certifications { gap: 0.5rem; }
+  .cert { font-size: 0.65rem; }
+
+  .yd-quickstats { gap: 0.5rem; }
+  .yd-spec-item { padding: 1rem 0.7rem; }
+}
+
+/* ═══ 6. SMALL / NARROW PHONES (≤360px) — iPhone SE, small Android ═══ */
+@media (max-width: 360px) {
+  .container { padding: 0 0.85rem; }
+  .nav-container { padding: 0 0.85rem; gap: 0.6rem; }
+  .logo-img { height: 34px; }
+  .logo-main { font-size: 0.92rem; }
+  .btn-whatsapp span, .btn-gold span { font-size: 0.72rem; }
+
+  .hero-headline { font-size: clamp(1.7rem, 11vw, 2.1rem); }
+  .hero-tagline { font-size: 0.86rem; }
+  .btn-primary, .btn-outline { padding: 0.78rem 1.2rem; font-size: 0.78rem; }
+
+  .section-title { font-size: 1.4rem; }
+  .section-desc { font-size: 0.86rem; }
+
+  .why-stats-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .dest-toggle-btn { padding: 0.65rem 1rem; font-size: 0.76rem; }
+  .route-btn { padding: 0.5rem 0.9rem; font-size: 0.7rem; }
+
+  .yd-specs-grid { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .gc-slide img { height: 220px; }
+}
+
+/* ═══ 7. SHORT / LANDSCAPE PHONES ═══
+   Phones rotated sideways (e.g. 667×375, 812×375, 900×412) have very
+   limited vertical space — the 100vh hero previously forced heavy
+   scrolling before any content was visible. */
+@media (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: 100svh; padding-top: 72px; }
+  .hero-content { padding-bottom: 40px; }
+  .hero-headline { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 1rem; }
+  .hero-tagline { margin-bottom: 1.2rem; }
+  .hero-highlights { margin-bottom: 1.2rem; }
+  .hero-overlay-bottom { height: 80px; }
+  .hero-dots { bottom: 90px; }
+  .slide-label { bottom: 100px; }
+  .yd-hero { height: 60vh; min-height: 220px; }
+}
+
+/* ═══ 8. TOUCH-FRIENDLY DROPDOWNS / SELECTS ON iOS ═══
+   Prevents iOS Safari from auto-zooming when a form field is focused
+   (triggered whenever font-size on an input is below 16px). */
+@media (max-width: 767px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .search-field select,
+  .search-field input,
+  .newsletter-form input {
+    font-size: max(16px, 0.88rem);
+  }
+}
+
+/* ═══ 9. PRINT SAFETY (fixed elements shouldn't print) ═══ */
+@media print {
+  .whatsapp-fab, .back-to-top, .site-header, .hamburger, .mobile-menu { display: none !important; }
+}
